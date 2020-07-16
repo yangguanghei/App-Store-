@@ -16,6 +16,7 @@
 		C1A4482E24C0A3BD003F0C5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4482D24C0A3BD003F0C5A /* main.m */; };
 		C1A4483824C0A3BD003F0C5A /* ___App_Store__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4483724C0A3BD003F0C5A /* ___App_Store__Tests.m */; };
 		C1A4484324C0A3BD003F0C5A /* ___App_Store__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4484224C0A3BD003F0C5A /* ___App_Store__UITests.m */; };
+		C1A4485224C0A563003F0C5A /* CustomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A4485124C0A563003F0C5A /* CustomFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		C1A4483E24C0A3BD003F0C5A /* 8.仿App Store轮播UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "8.仿App Store轮播UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1A4484224C0A3BD003F0C5A /* ___App_Store__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___App_Store__UITests.m"; sourceTree = "<group>"; };
 		C1A4484424C0A3BD003F0C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1A4485024C0A563003F0C5A /* CustomFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFlowLayout.h; sourceTree = "<group>"; };
+		C1A4485124C0A563003F0C5A /* CustomFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				C1A4481F24C0A3B8003F0C5A /* SceneDelegate.m */,
 				C1A4482124C0A3B8003F0C5A /* ViewController.h */,
 				C1A4482224C0A3B8003F0C5A /* ViewController.m */,
+				C1A4485024C0A563003F0C5A /* CustomFlowLayout.h */,
+				C1A4485124C0A563003F0C5A /* CustomFlowLayout.m */,
 				C1A4482424C0A3B8003F0C5A /* Main.storyboard */,
 				C1A4482724C0A3BD003F0C5A /* Assets.xcassets */,
 				C1A4482924C0A3BD003F0C5A /* LaunchScreen.storyboard */,
@@ -271,6 +276,7 @@
 				C1A4481D24C0A3B8003F0C5A /* AppDelegate.m in Sources */,
 				C1A4482E24C0A3BD003F0C5A /* main.m in Sources */,
 				C1A4482024C0A3B8003F0C5A /* SceneDelegate.m in Sources */,
+				C1A4485224C0A563003F0C5A /* CustomFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
