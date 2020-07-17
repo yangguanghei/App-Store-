@@ -11,7 +11,9 @@
 #import "CustomFlowLayout.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
-
+{
+    NSInteger index;
+}
 @property (nonatomic, strong) UICollectionView * collectionView;
 
 @end
@@ -23,6 +25,39 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor yellowColor];
     [self.view addSubview:self.collectionView];
+    
+    UIButton * leftBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:leftBtn];
+    leftBtn.frame = CGRectMake(50, 450, 50, 30);
+    [leftBtn setTitle:@"左" forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(leftAction) forControlEvents:UIControlEventTouchUpInside];
+    leftBtn.backgroundColor = [UIColor whiteColor];
+    UIButton * rightBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:rightBtn];
+    rightBtn.frame = CGRectMake(150, 450, 50, 30);
+    [rightBtn setTitle:@"右" forState:UIControlStateNormal];
+    [rightBtn addTarget:self action:@selector(rightAction) forControlEvents:UIControlEventTouchUpInside];
+    rightBtn.backgroundColor = [UIColor whiteColor];
+    
+    index = 0;
+}
+
+- (void)leftAction{
+    if (index == 0) {
+        return;
+    }
+    index --;
+    CGFloat width = self.view.frame.size.width - 30;
+    [self.collectionView setContentOffset:CGPointMake(width * index, 0) animated:YES];
+}
+
+- (void)rightAction{
+    if (index == 2) {
+        return;
+    }
+    index ++;
+    CGFloat width = self.view.frame.size.width - 30;
+    [self.collectionView setContentOffset:CGPointMake(width * index, 0) animated:YES];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -33,6 +68,10 @@
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"111" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor redColor];
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"%@   %f", NSStringFromCGPoint(scrollView.contentOffset), scrollView.frame.size.width);
 }
 
 - (UICollectionView *)collectionView{
